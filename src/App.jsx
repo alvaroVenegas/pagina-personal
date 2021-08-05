@@ -18,19 +18,16 @@ function App() {
 
   return (
     <Router>
-
       <div className="app">
+        <Navbar></Navbar>
         <Suspense fallback={<div>Cargando...</div>} >
-        <Switch>
-          <Route exact path="/about" component={(props) => <Aboutme {...props} />} />
-          <Route exact path="/contact" component={(props) => <Contact {...props} />} />
-          <Route exact path="/cv" component={(props) => <Cv {...props} />} />
-          <Route exact path="/portfolio" component={(props) => <Portfolio {...props} />} />
-
-        </Switch>
+          <Switch>
+            <Route exact path="/about" component={(props) => <Aboutme {...props} />} />
+            <Route exact path="/contact" component={(props) => <Contact {...props} />} />
+            <Route exact path="/cv" component={(props) => <Cv {...props} />} />
+            <Route exact path="/portfolio" component={(props) => <Portfolio {...props} />} />
+          </Switch>
         </Suspense>
-
-
       </div>
     </Router>
   );

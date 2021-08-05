@@ -1,8 +1,16 @@
+import {descriptionAboutme} from"../../data"
+
 
 const Aboutme = () => {
 
     return (
-        <div>Aboutme</div>
+        <div>
+            <img src="" />
+            <div>{descriptionAboutme.description}</div>
+
+
+
+        </div>
     )
 
 }
