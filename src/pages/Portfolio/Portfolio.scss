@@ -1,3 +1,55 @@
-.azul{
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+
+.container-portfolio{
+    text-align:center;
+    h3{
+        margin: 15px 0px;
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+    }
+}
+
+.row-portfolio{
     background-color:lightblue;
+    align-items:center;
+   
+    
+
+}
+.col-portfolio{
+    display: flex;
+    justify-content: center;
+    //box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+    //overflow: hidden;
+    
+    &--a{
+        transition: all 0.25s;
+        color:black !important;
+        
+        :hover{
+        transform: translateY(-2.5px) translateX(-2.5px) ;
+        box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+        }
+    } 
+
+}
+
+.card-portfolio{
+    //max-width: 300px;
+    //max-height: 300px;
+    margin: 10px 0px;
+    width: 300px;
+    height: 200px;;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    border-radius:10px;
+    border:none;
+    :hover{
+        transform: translateY(0px) translateX(0px) ;
+        box-shadow: none !important;
+        
+       
+    }
+
+   
 }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Suspense, lazy } from 'react';
 import { Navbar } from './components/index';
 import './App.scss';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Aboutme = lazy(() => import('./pages/Aboutme/Aboutme'))
 const Contact = lazy(() => import('./pages/Contact/Contact'))

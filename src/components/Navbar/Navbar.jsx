@@ -6,9 +6,9 @@ const Navbar = () => {
 
     return (
         
-            <header className='nav'>
-                <div className='nav__content'>
-                    <nav>
+            <header >
+                
+                    <nav className='nav'>
                       
                         <ul className='nav__right'>
                             <li>
@@ -34,7 +34,7 @@ const Navbar = () => {
                         </ul>
                        
                     </nav>
-                </div>
+              
             </header>
         
     )

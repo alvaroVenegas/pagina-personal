@@ -1,5 +1,5 @@
 import { portfolioFront, portfolioBack } from "../../data";
-import {Container, Row, Col} from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import './Portfolio.scss';
 
 
@@ -7,49 +7,38 @@ import './Portfolio.scss';
 const Portfolio = () => {
 
     return (
-        <div>
-            <Container >
-                <Row className="azul">
-                    <Col>
-                      
-                            <p >Front-End</p>
-                                </Col>
-                                <Col>
-                                <p >Front-End</p>
-                                </Col>
-            
-            
-                            </Row>
-                        </Container>
-                            <div>
-                                {portfolioFront.map(item => {
-                                    return (
-                                        <div key={JSON.stringify(item)}>
-                                            <a href={item.url}>
-                                                <span>{item.nameApp}</span>
-                                                <span>{item.tecnology}</span>
-                                            </a>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                       
-                       
-                            <p>Back-End</p>
-                            <div>
-                                {portfolioBack.map(item => {
-                                    return (
-                                        <div key={JSON.stringify(item)}>
-                                            <a href={item.url}>
-                                                <span>{item.nameApp}</span>
-                                                <span>{item.tecnology}</span>
-                                            </a>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        
-        </div>
+        <Container className="container-portfolio">
+            <h3 >Front-End</h3>
+            <Row className="row-portfolio">
+                {portfolioFront.map(item => {
+                    return (
+                        <Col key={JSON.stringify(item)} className="col-portfolio" >
+                            <a href={item.url} className="col-portfolio--a">
+                                <Card className="card-portfolio">
+                                    <p>{item.nameApp}</p>
+                                    <p>{item.tecnology}</p>
+                                </Card>
+                            </a>
+                        </Col>
+                    )
+                })}
+            </Row>
+            <h3>Back-End</h3>
+            <Row className="row-portfolio">
+                {portfolioBack.map(item => {
+                    return (
+                        <Col key={JSON.stringify(item)} className="col-portfolio">
+                            <a href={item.url} className="col-portfolio--a">
+                                <Card className="card-portfolio">
+                                    <p>{item.nameApp}</p>
+                                    <p>{item.tecnology}</p>
+                                </Card>
+                            </a>
+                        </Col>
+                    )
+                })}
+            </Row>
+        </Container>
     )
 
 }
